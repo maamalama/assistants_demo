@@ -8,7 +8,7 @@ const HELICONE_API_KEY = "";
 async function defaultRequestProdAssistant() {
   const session = randomUUID();
   const openai = new OpenAI({
-    apiKey: HELICONE_API_KEY,
+    apiKey: openaiApiKey,
     baseURL: `https://oai.helicone.ai/v1/${HELICONE_API_KEY}`,
   });
 
@@ -218,4 +218,4 @@ async function VisaApprovalCheckererAssistant() {
   }
 }
 
-VisaApprovalCheckererAssistant();
+defaultRequestProdAssistant();
